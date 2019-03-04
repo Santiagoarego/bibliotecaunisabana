@@ -9,7 +9,13 @@
 	Last Name <input type="text" name="last_name" value=''>
 	<input type="submit" value="Ingresar">
 </form>
+<%! String nombre = request.getParameter("first_name");
+String apellido = request.getParameter("last_name");
+String total =nombre + " "+apellido;
+%>
+
+
 <p><b>El nombre y apellidos son: </b>
-	<%=request.getParameter("first_name") + " "+ request.getParameter("last_name")%>
+	<%=total%>
 </body>
 </html>
