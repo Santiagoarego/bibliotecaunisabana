@@ -19,7 +19,7 @@
 nombre = request.getParameter("first_name");
 apellido = request.getParameter("last_name");
 total = nombre +" "+ apellido;
-if(nombre=!null){
+if(nombre!=null){
 out.print("<br>"+total);
 }
 	%>
