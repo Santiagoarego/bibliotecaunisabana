@@ -9,7 +9,7 @@
 	Last Name <input type="text" name="last_name" value=''>
 	<input type="submit" value="Ingresar">
 </form>
-<%! String nombre,apellido,total;
+<%! String nombre="",apellido="",total="";
 %>
 
 
