@@ -41,14 +41,14 @@
     </div>
     <div id="crearProyecto" style="display:none">
 
-        <form action="main.jsp" method ="GET">
+        <form action="main.jsp" method ="POST">
         Código de proyecto:<input type="text"  class="inputdata" name="codigoProyecto" placeholder="Ingrese código del proyecto..."><br>
         Nombre del proyecto:<input type="text"  class="inputdata" name="nombreProyecto" placeholder="Ingrese nombre de proyecto..."><br>
         Tiempo aproximado de elaboración del proyecto (días):<input type="number"  class="inputdata" name="duracionProyecto" placeholder="Ingrese el tiempo aproximado de duracion del proyecto en días ..."><br>
-        Plataformas de desarrollo:<textarea  class="inputdata" name="plataformasDesarrollo" placeholder="Ingrese plataformas de desarrollo..." style="height:200px"></textarea><br>
+        Plataformas de desarrollo:<textarea  class="inputdata"  name="plataformasDesarrollo" placeholder="Ingrese plataformas de desarrollo..." style="height:200px"></textarea><br>
 
 
-        <input type="submit" value="Guardar Proyecto">
+        <input type="submit" name="btn" value="Guardar Proyecto">
     </form>
     </div>
     <div id="crearAsignacion" style="display:none">
@@ -75,9 +75,9 @@
     </div>
     <div id="buscarProyecto" style="display:none">
                 
-<form action="main.jsp" method="GET">
+<form action="main.jsp" method="POST">
         Codigo : <input type="text" name="buscaProyecto"><br>
-        <input type="submit" class = "button" value="Buscar">
+        <input type="submit" name="btn" class = "button" value="Buscar">
 
         
 </form>
