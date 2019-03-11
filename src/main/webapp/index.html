@@ -1,0 +1,121 @@
+<!--8 input type-->
+
+<!DOCTYPE html>
+<html> 
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <link rel="stylesheet" type="text/css" href="proyectStyle.css">
+        <title>Control de desarrollo</title>    
+
+    </head>
+
+    <body>
+
+
+    <center>
+        
+        <div class="btn-group">
+            <button class = "button" onclick="mostrarNuevoEmpleado()" disabled>Nuevo empleado</button>
+            <button class = "button" onclick="crearProyecto.style.display='block', buscarProyecto.style.display='none'">Nuevo proyecto</button>
+            <button class = "button" onclick="mostrarAsignacion()" disabled>Asignación</button>
+            <button  class = "button" onclick="mostrarDocumento()" disabled>Buscar por documento</button>
+             <button  class = "button" onclick="crearProyecto.style.display='none', buscarProyecto.style.display='block'">Buscar por codigo</button>
+             <button  class = "button" onclick="mostrarEmpleados()"disabled>Empleados  proyecto</button>
+             <button  class = "button" onclick="mostrarProyectosEmpleado()" disabled>Proyectos  empleado</button>
+             <button  class = "button" onclick="mostrarOrdenadoFinal(),ordenamiento()" disabled>Ordenamiento</button>
+
+        </div>
+    </center>
+    <div id="crearEmpleado" style="display:none">
+
+       
+
+            Nombre:<input type="text"  class="inputdata" name="nombre" placeholder="Ingrese nombre..."><br>
+            Apellidos:<input type="text"  class="inputdata" name="apellido" placeholder="Ingrese apellido..."><br>
+            Documento:<input type="text"  class="inputdata" name="documento" placeholder="Ingrese documento de identificación..."><br>
+            Cargo:<input type="text"  class="inputdata" name="cargo" placeholder="Ingrese cargo..."><br>
+            Habilidades:<textarea  class="inputdata" name="habilidades" placeholder="Ingrese hablidades..." style="height:200px"></textarea><br>
+
+            <button class = "button" onclick="guardarEmpleado()" >Guardar contacto</button><br>
+        
+    </div>
+    <div id="crearProyecto" style="display:none">
+
+        <form action="main.jsp" method ="GET">
+        Código de proyecto:<input type="text"  class="inputdata" name="codigoProyecto" placeholder="Ingrese código del proyecto..."><br>
+        Nombre del proyecto:<input type="text"  class="inputdata" name="nombreProyecto" placeholder="Ingrese nombre de proyecto..."><br>
+        Tiempo aproximado de elaboración del proyecto (días):<input type="number"  class="inputdata" name="duracionProyecto" placeholder="Ingrese el tiempo aproximado de duracion del proyecto en días ..."><br>
+        Plataformas de desarrollo:<textarea  class="inputdata" name="plataformasDesarrollo" placeholder="Ingrese plataformas de desarrollo..." style="height:200px"></textarea><br>
+
+
+        <input type="submit" value="Guardar Proyecto">
+    </form>
+    </div>
+    <div id="crearAsignacion" style="display:none">
+
+        
+
+        Código de proyecto:<input type="text"  class="inputdata" id="codigoProyectoAsignacion" placeholder="Ingrese código del proyecto..."><br>
+        Documento del empleado:<input type="text"  class="inputdata" id="documentoEmpleadoAsignacion" placeholder="Ingrese documento del empleado..."><br>
+        Horas diarias:<input type="number"  class="inputdata" id="horasDiarias" placeholder="Ingrese las horas diarias asignadas al empleado..."><br>
+        Días asignados:<input type="number"  class="inputdata" id="diasAsignados" placeholder="Ingrese los días asignados del empleado en el proyecto..."><br>
+        Responsabilidades:<textarea  class="inputdata" id="responsabilidadesAsignacion" placeholder="Ingrese las responsabilidades del empleado..." style="height:200px"></textarea><br>
+
+
+        <button class = "button" onclick="guardaAsignacion()" >Guardar asignación</button><br>
+    </div>
+    <div id="buscarEmpleado" style="display:none">
+                
+
+        Documento: <input type="number" id="buscaDocumento"><br>
+        <button class = "button" onclick="buscarPorDocumento()" >Buscar</button><br>
+
+        <p id="porDocumento"></p>
+
+    </div>
+    <div id="buscarProyecto" style="display:none">
+                
+<form action="main.jsp" method="GET">
+        Codigo : <input type="text" name="buscaProyecto"><br>
+        <input type="submit" class = "button" value="Buscar">
+
+        
+</form>
+
+    </div>
+     <div id="empleadosProyecto" style="display:none">
+                
+
+        Codigo : <input type="text" id="buscaEmpleadosProyecto"><br>
+        <button class = "button" onclick="buscarPorCodigoEmpleadoProyecto()" >Buscar</button><br>
+
+        <p id="porCodigoEmpleado"></p>
+
+    </div>
+    <div id="proyectosEmpleado" style="display:none">
+                
+
+        Documento : <input type="number" id="buscaProyectosEmpleado"><br>
+        <button class = "button" onclick="buscarPorProyectoEmpleado()" >Buscar</button><br>
+
+        <p id="porDocumentoProyecto"></p>
+
+    </div>
+    <div id="verHoras" style="display:none">
+
+
+
+        <p id="todos"></p>
+
+    </div>
+
+
+
+
+
+    
+
+
+
+</body>
+</html>
