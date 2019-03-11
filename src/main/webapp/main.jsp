@@ -9,9 +9,9 @@ String concatenar="";
 
 	<%
 
-codigos.add = request.getParameter("codigoProyecto");
+codigos.add( request.getParameter("codigoProyecto"));
 concatenar = request.getParameter("nombreProyecto")+"\n"+ request.getParameter("duracionProyecto")+"\n"+ request.getParameter("plataformasDesarrollo") ;
-datos.add = concatenar;
+datos.add( concatenar);
 out.println(<html><body><script>alert("JSP");</script></body></html>);
 
 	%>
