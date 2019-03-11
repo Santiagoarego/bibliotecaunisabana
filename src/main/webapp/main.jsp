@@ -15,7 +15,7 @@ String concatenar="",btn="";
 		datos.add( concatenar);
 		out.println("<html><body><script>alert(\"REGISTRAR\")</script></body></html>");
 	}
-	if(btn.equals("Buscar")){
+	else if(btn.equals("Buscar")){
 	out.println("<html><body><script>alert(\"BUSCAR\")</script></body></html>");
 }
 
