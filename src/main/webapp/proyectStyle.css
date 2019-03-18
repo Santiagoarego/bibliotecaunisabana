@@ -16,7 +16,7 @@ body {
 
     -webkit-transition-duration: 0.4s; 
     transition-duration: 0.4s;
-    float: left;
+    float: center;
     width: 25%;
 }
 .button:hover {

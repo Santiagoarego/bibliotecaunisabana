@@ -18,8 +18,8 @@
             <a href="empleado.html"><button class = "button">Nuevo empleado</button></a>
             <a href="proyecto.html"><button class = "button">Nuevo proyecto</button></a>
             <a href="asignacion.html"><button class = "button">Asignación</button></a>
-            <button  class = "button">Buscar por documento</button>
-             <button  class = "button" onclick="crearProyecto.style.display='none', buscarProyecto.style.display='block'">Buscar por codigo</button>
+            <a href="buscdoc.html"><button  class = "button">Buscar por documento</button></a>
+            <a href="buscod.html"><button  class = "button">Buscar por codigo</button></a>
              <button  class = "button" onclick="mostrarEmpleados()"disabled>Empleados  proyecto</button>
              <button  class = "button" onclick="mostrarProyectosEmpleado()" disabled>Proyectos  empleado</button>
              <button  class = "button" onclick="mostrarOrdenadoFinal(),ordenamiento()" disabled>Ordenamiento</button>
@@ -29,51 +29,8 @@
     
     
    
-    <div id="buscarEmpleado" style="display:none">
-                
-
-        Documento: <input type="number" id="buscaDocumento"><br>
-        <button class = "button" onclick="buscarPorDocumento()" >Buscar</button><br>
-
-        <p id="porDocumento"></p>
-
-    </div>
-    <div id="buscarProyecto" style="display:none">
-                
-<form action="main.jsp" method="POST">
-        Codigo : <input type="text" name="buscaProyecto"><br>
-        <input type="submit" name="btn" class = "button" value="Buscar">
-
-        
-</form>
-
-    </div>
-     <div id="empleadosProyecto" style="display:none">
-                
-
-        Codigo : <input type="text" id="buscaEmpleadosProyecto"><br>
-        <button class = "button" onclick="buscarPorCodigoEmpleadoProyecto()" >Buscar</button><br>
-
-        <p id="porCodigoEmpleado"></p>
-
-    </div>
-    <div id="proyectosEmpleado" style="display:none">
-                
-
-        Documento : <input type="number" id="buscaProyectosEmpleado"><br>
-        <button class = "button" onclick="buscarPorProyectoEmpleado()" >Buscar</button><br>
-
-        <p id="porDocumentoProyecto"></p>
-
-    </div>
-    <div id="verHoras" style="display:none">
-
-
-
-        <p id="todos"></p>
-
-    </div>
-
+    
+   
 
 
 
