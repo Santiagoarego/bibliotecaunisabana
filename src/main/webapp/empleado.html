@@ -9,18 +9,20 @@
     </head>
 
     <body>
-    	<div id="crearEmpleado">
+    	<center>
+	    	<div id="crearEmpleado">
 
-       
-
-            Nombre:<input type="text"  class="inputdata" name="nombre" placeholder="Ingrese nombre..."><br>
-            Apellidos:<input type="text"  class="inputdata" name="apellido" placeholder="Ingrese apellido..."><br>
-            Documento:<input type="text"  class="inputdata" name="documento" placeholder="Ingrese documento de identificación..."><br>
-            Cargo:<input type="text"  class="inputdata" name="cargo" placeholder="Ingrese cargo..."><br>
-            Habilidades:<textarea  class="inputdata" name="habilidades" placeholder="Ingrese hablidades..." style="height:200px"></textarea><br>
-
-            <button class = "button" onclick="guardarEmpleado()" >Guardar contacto</button><br>
-        
-    	</div>
+	       
+	    		<form action="hello" method="POST">
+		            Nombre:<input type="text"  class="inputdata" name="nombreEmpleado" placeholder="Ingrese nombre..."><br>
+		            Apellidos:<input type="text"  class="inputdata" name="apellidoEmpleado" placeholder="Ingrese apellido..."><br>
+		            Documento:<input type="text"  class="inputdata" name="documentoEmpleado" placeholder="Ingrese documento de identificación..."><br>
+		            Cargo:<input type="text"  class="inputdata" name="cargoEmpleado" placeholder="Ingrese cargo..."><br>
+		            Habilidades:<textarea  class="inputdata" name="habilidadesEmpleado" placeholder="Ingrese hablidades..." style="height:200px"></textarea><br>
+		            <input type="submit" name="btn" class = "button" value="Guardar empleado">
+	        	</form>
+	        
+	    	</div>
+    	</center>
 	</body>
 </html>
