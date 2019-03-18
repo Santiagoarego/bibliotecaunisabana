@@ -15,9 +15,9 @@
     <center>
         
         <div class="btn-group">
-            <button class = "button" onclick="mostrarNuevoEmpleado()" disabled>Nuevo empleado</button>
-            <button class = "button" onclick="crearProyecto.style.display='block', buscarProyecto.style.display='none'">Nuevo proyecto</button>
-            <button class = "button" onclick="mostrarAsignacion()" disabled>Asignación</button>
+            <a href="empleado.html"><button class = "button">Nuevo empleado</button></a>
+            <a href="proyecto.html"><button class = "button">Nuevo proyecto</button></a>
+            <a href="asignacion.html" ><button class = "button">Asignación</button></a>
             <button  class = "button" onclick="mostrarDocumento()" disabled>Buscar por documento</button>
              <button  class = "button" onclick="crearProyecto.style.display='none', buscarProyecto.style.display='block'">Buscar por codigo</button>
              <button  class = "button" onclick="mostrarEmpleados()"disabled>Empleados  proyecto</button>
@@ -26,19 +26,7 @@
 
         </div>
     </center>
-    <div id="crearEmpleado" style="display:none">
-
-       
-
-            Nombre:<input type="text"  class="inputdata" name="nombre" placeholder="Ingrese nombre..."><br>
-            Apellidos:<input type="text"  class="inputdata" name="apellido" placeholder="Ingrese apellido..."><br>
-            Documento:<input type="text"  class="inputdata" name="documento" placeholder="Ingrese documento de identificación..."><br>
-            Cargo:<input type="text"  class="inputdata" name="cargo" placeholder="Ingrese cargo..."><br>
-            Habilidades:<textarea  class="inputdata" name="habilidades" placeholder="Ingrese hablidades..." style="height:200px"></textarea><br>
-
-            <button class = "button" onclick="guardarEmpleado()" >Guardar contacto</button><br>
-        
-    </div>
+    
     <div id="crearProyecto" style="display:none">
 
         <form action="main.jsp" method ="POST">
