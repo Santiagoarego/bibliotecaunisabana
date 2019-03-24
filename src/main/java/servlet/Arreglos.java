@@ -41,6 +41,10 @@ public class Arreglos{
         relaciones.add(rel);
 
     }
+    public ArrayList<Empleado> getEmpleados(){
+
+        return this.empleados;
+    }
 
 }
     
