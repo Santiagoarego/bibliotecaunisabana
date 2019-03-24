@@ -22,10 +22,10 @@ public class GuardaRelacion{
 
         Arreglos sing = Arreglos.constructora();
 
-        Relacion res = new Relacion(req.getParameter("documentoEmpleado"),
-            req.getParameter("nombreEmpleado"),req.getParameter("apellidoEmpleado"),req.getParameter("cargoEmpleado"),
-            req.getParameter("habilidadesEmpleado"));
-        sing.guardaEmpleado(emp);
+        Relacion res = new Relacion(req.getParameter("codigoProyectoAsignacion"),
+            req.getParameter("documentoEmpleadoAsignacion"),Integer.parseInt(req.getParameter("horasDiarias")),Integer.parseInt(req.getParameter("diasAsignados")),
+            req.getParameter("responsabilidadesAsignacion"));
+        sing.guardaRelacion(res);
     }
 
 }

@@ -5,7 +5,7 @@ public class Relacion{
 	private String documento;
 	private int horas;
 	private int dias;
-	private String responsabilidades
+	private String responsabilidades;
 
 	
 
