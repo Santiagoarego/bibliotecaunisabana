@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
         name = "buscaDocumento", 
         urlPatterns = {"/buscaDocumento"}
     )
-public class GuardaProyecto extends HttpServlet{
+public class BuscaDocumento extends HttpServlet{
 
     
 
