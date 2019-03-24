@@ -13,11 +13,11 @@ import javax.servlet.http.HttpServletResponse;
         name = "empleado", 
         urlPatterns = {"/guardaEmpleado"}
     )
-public class GuardaEmpleado{
+public class GuardaEmpleado extends HttpServlet{
 
    
 
-    public void doPost(HttpServletRequest req, HttpServletResponse res)
+    public void doPost  (HttpServletRequest req, HttpServletResponse res)
     throws ServletException, IOException {
 
         Arreglos sing = Arreglos.constructora();
