@@ -31,7 +31,7 @@ public class GuardaProyecto extends HttpServlet{
         Arreglos client = Arreglos.constructora();
         ArrayList <Empleado> emp= client.getEmpleados.size();
         
-        for(int i<0; i<emp.size();i++){
+        for(int i=0; i<emp.size();i++){
             if(emp.get(i).getDocumento.equals(doc)){
                 
                 out.println("<html><body>Nombre: "+emp.get(i).getNombre+"<br>Appelidos: "+emp.get(i).getApellido+"<br>Cargo: "+emp.get(i).getCargo
