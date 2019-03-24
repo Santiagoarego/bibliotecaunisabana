@@ -31,7 +31,7 @@ public class Arreglos{
 
 
     public void guardaEmpleado(Empleado emp){
-        empleados.add(pro);
+        empleados.add(emp);
     }
 
     public void guardaProyecto(Proyecto pro){
