@@ -45,6 +45,10 @@ public class Arreglos{
 
         return this.empleados;
     }
+    public ArrayList<Proyecto> getProyectos(){
+
+        return this.proyectos;
+    }
 
 }
     
