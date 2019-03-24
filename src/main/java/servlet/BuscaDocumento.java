@@ -22,23 +22,28 @@ public class GuardaProyecto extends HttpServlet{
 
     public void doPost(HttpServletRequest req, HttpServletResponse res)
     throws ServletException, IOException {
-        
-        busca(req.getParameter("buscaDocumento"));
-        
-    }
-
-    public void busca(String doc){
         Arreglos client = Arreglos.constructora();
-        ArrayList <Empleado> emp= client.getEmpleados.size();
+        ArrayList <Empleado> emp= client.getEmpleados();
+        busca(req.getParameter("buscaDocumento"));
+        res.setContentType("text/html");
+        PrintWriter pw = res.getWriter();
+        pw.println("<HTML><HEAD><TITLE>Busca Empleado</TITLE></HEAD>");
+
         
         for(int i=0; i<emp.size();i++){
-            if(emp.get(i).getDocumento.equals(doc)){
+            if(emp.get(i).getDocumento().equals(doc)){
                 
-                out.println("<html><body>Nombre: "+emp.get(i).getNombre+"<br>Appelidos: "+emp.get(i).getApellido+"<br>Cargo: "+emp.get(i).getCargo
-                +"<br>Habilidades: "+emp.get(i).getHabilidades+ " </body></html>");
+                pw.println( "Nombre: "+emp.get(i).getNombre()+"<br>Appelidos: "+emp.get(i).getApellido()+"<br>Cargo: "+emp.get(i).getCargo()
+                +"<br>Habilidades: "+emp.get(i).getHabilidades());
             }
         }
+        pw.close();
 
     }
+        
+    }
+
+    
+       
 
 }
