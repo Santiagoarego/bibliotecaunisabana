@@ -24,7 +24,7 @@ public class GuardaProyecto extends HttpServlet{
     throws ServletException, IOException {
         Arreglos client = Arreglos.constructora();
         ArrayList <Empleado> emp= client.getEmpleados();
-        busca(req.getParameter("buscaDocumento"));
+        String doc = req.getParameter("buscaDocumento");
         res.setContentType("text/html");
         PrintWriter pw = res.getWriter();
         pw.println("<HTML><HEAD><TITLE>Busca Empleado</TITLE></HEAD>");
