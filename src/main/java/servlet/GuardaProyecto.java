@@ -24,7 +24,7 @@ public class GuardaProyecto extends HttpServlet{
     throws ServletException, IOException {
         Arreglos client = Arreglos.constructora();
 
-        if(!this.existeProyecto(req.getParameter("codigoProyecto"),client.getProyectos()){
+        if(!this.existeProyecto(req.getParameter("codigoProyecto"),client.getProyectos())){
         Proyecto pro = new Proyecto(req.getParameter("codigoProyecto"),
             req.getParameter("nombreProyecto"),Integer.parseInt(req.getParameter("duracionProyecto")),req.getParameter("plataformasDesarrollo"));
         client.guardaProyecto(pro);
