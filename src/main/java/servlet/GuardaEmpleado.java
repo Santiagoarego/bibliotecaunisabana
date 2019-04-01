@@ -30,7 +30,7 @@ public class GuardaEmpleado extends HttpServlet{
                 req.getParameter("habilidadesEmpleado"));
             sing.guardaEmpleado(emp);
         }else{
-            pw.println("<HTML><SCRIPT>alert(\"no existe\");</SCRIPT></HTML>");
+            pw.println("<HTML><SCRIPT>alert(\"Ya Esta Registrado\"); window.history.back();</SCRIPT></HTML>");
             pw.close();
         }
 
