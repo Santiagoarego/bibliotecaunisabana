@@ -23,7 +23,10 @@ public class GuardaProyecto extends HttpServlet{
     public void doPost(HttpServletRequest req, HttpServletResponse res)
     throws ServletException, IOException {
         Arreglos client = Arreglos.constructora();
-
+        res.setContentType("text/html");
+        //Sirven para printear un HTML como respuesta
+        PrintWriter pw = res.getWriter();
+        pw.println("<HTML><HEAD><TITLE>Busca Proyecto</TITLE></HEAD>");
         if(!this.existeProyecto(req.getParameter("codigoProyecto"),client.getProyectos())){
         Proyecto pro = new Proyecto(req.getParameter("codigoProyecto"),
             req.getParameter("nombreProyecto"),Integer.parseInt(req.getParameter("duracionProyecto")),req.getParameter("plataformasDesarrollo"));
