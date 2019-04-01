@@ -1,6 +1,6 @@
 package servlet;
 
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
@@ -39,7 +39,7 @@ public class GuardaEmpleado extends HttpServlet{
     public boolean existeEmpleado(String documento, ArrayList<Empleado> emp){
         boolean existe=false;
         for(int i=0; i<emp.size();i++) {
-            if(emp.get(i).getDocumento.equals(documento)){
+            if(emp.get(i).getDocumento().equals(documento)){
                 existe=true;
                 break;
             }
