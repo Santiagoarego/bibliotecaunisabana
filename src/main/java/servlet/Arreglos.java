@@ -18,7 +18,7 @@ public class Arreglos{
     private static Arreglos instancia = null;
     private ArrayList<Comprador> compradores = new ArrayList();
     private ArrayList<Vendedor> vendedores = new ArrayList();
-    private ArrayList<Venta> Ventas = new ArrayList();
+    private ArrayList<Venta> ventas = new ArrayList();
 
     public static Arreglos constructora(){
 
