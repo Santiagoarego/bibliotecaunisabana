@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="proyectStyle.css">
+    <title>Control de desarrollo</title>
+
+</head>
+
+<body>
+<center>
+    <div id="nuevaVenta">
+
+        <form action="guardaVenta" method="POST">
+            <input type="text" class="inputdata" name="nombreProducto" placeholder="Nombre del producto..."><br>
+            <input type="text" class="inputdata" name="lugarProcedencia" placeholder="Lugar de procedencia..."><br>
+            <input type="text" class="inputdata" name="nombreVendedor" placeholder="Nombre del vendedor ..."><br>
+            <textarea class="inputdata" name="descripcionProducto" placeholder="Descripcion del producto..."
+                      style="height:200px"></textarea><br>
+            <input type="number" class="inputdata" name="unidadesDisponibles"
+                   placeholder="Unidades disponibles ..."><br>
+            Fecha de disponibilidad<input type="date" class="inputdata" name="fecha"
+                   placeholder="Fecha disponible"><br>
+            <input type="number" class="inputdata" name="precioUnidad"
+                   placeholder="Precio por unidad ..."><br>
+            <input type="email" class="inputdata" name="email" placeholder="e-mail del vendedor ..."><br>
+            <input type="password" class="inputdata" name="email" placeholder="contraseña del vendedor ..."><br>
+            <input type="submit" name="btn" class="button" value="Guardar venta">
+        </form>
+    </div>
+</center>
+</body>
+</html>
