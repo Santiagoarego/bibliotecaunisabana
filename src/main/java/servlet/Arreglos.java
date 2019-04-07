@@ -13,31 +13,32 @@ import javax.servlet.http.HttpServletResponse;
         name = "MyServlet", 
         urlPatterns = {"/arreglos"}
     )
-public class Arreglos{
+public class Arreglos {
 
     private static Arreglos instancia = null;
     private ArrayList<Comprador> compradores = new ArrayList();
     private ArrayList<Vendedor> vendedores = new ArrayList();
     private ArrayList<Venta> ventas = new ArrayList();
 
-    public static Arreglos constructora(){
+    public static Arreglos constructora() {
 
-        if(instancia==null){
-          instancia=new Arreglos();
+        if (instancia == null) {
+            instancia = new Arreglos();
         }
 
         return instancia;
     }
 
 
-    public void guardaComprador(Comprador emp){
+    public void guardaComprador(Comprador emp) {
         compradores.add(emp);
     }
 
-    public void guardaVendedor(Vendedor pro){
+    public void guardaVendedor(Vendedor pro) {
         vendedores.add(pro);
     }
-    public void guardaRelacion(Venta rel){
+
+    public void guardaRelacion(Venta rel) {
         ventas.add(rel);
 
     }
@@ -59,12 +60,10 @@ public class Arreglos{
     }
 
     public ArrayList<Venta> getVentas() {
-        return Ventas;
+        return ventas;
     }
 
     public void setVentas(ArrayList<Venta> ventas) {
-        Ventas = ventas;
+        this.ventas = ventas;
     }
 }
-    
-
