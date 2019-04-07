@@ -26,8 +26,8 @@ public class GuardaVenta extends HttpServlet {
         if (this.existeVendedor(req.getParameter("email"), sing.getVendedores(),req.getParameter("password"))) {
             Venta vent;
             vent = new Venta(req.getParameter("correoVendedor"), req.getParameter("nombreProducto"), req.getParameter("lugarProcedencia")
-                    , req.getParameter("nombreVendedor"), req.getParameter("descripcionProducto"), Integer.parseInt(req.getParameter("unidadesDisponibles")),
-                    req.getParameter("fecha"), Integer.parseInt(req.getParameter("precioUnidad")));
+                    , req.getParameter("nombreVendedor"), req.getParameter("descripcionProducto"), req.getParameter("unidadesDisponibles"),
+                    req.getParameter("fecha"), req.getParameter("precioUnidad"));
             sing.guardaVenta(vent);
             pw.println("<HTML><SCRIPT>alert(\"Venta Registrado\"); window.history.back();</SCRIPT></HTML>");
             pw.close();
