@@ -38,7 +38,7 @@ public class Arreglos {
         vendedores.add(pro);
     }
 
-    public void guardaRelacion(Venta rel) {
+    public void guardaVenta(Venta rel) {
         ventas.add(rel);
 
     }
