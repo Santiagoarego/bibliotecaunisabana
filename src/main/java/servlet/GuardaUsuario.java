@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
         name = "usuario",
         urlPatterns = {"/guardaUsuario"}
     )
-public class GuardaEmpleado extends HttpServlet{
+public class GuardaUsuario extends HttpServlet{
 
    
 
