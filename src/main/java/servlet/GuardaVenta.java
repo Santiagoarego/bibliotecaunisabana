@@ -23,7 +23,7 @@ public class GuardaVenta extends HttpServlet {
         PrintWriter pw = res.getWriter();
 
         Arreglos sing = Arreglos.constructora();
-        if (this.existeVendedor(req.getParameter("correoVendedor"), sing.getVendedores(),req.getParameter("password"))) {
+        if (this.existeVendedor(req.getParameter("email"), sing.getVendedores(),req.getParameter("password"))) {
             Venta vent;
             vent = new Venta(req.getParameter("correoVendedor"), req.getParameter("nombreProducto"), req.getParameter("lugarProcedencia")
                     , req.getParameter("nombreVendedor"), req.getParameter("descripcionProducto"), Integer.parseInt(req.getParameter("unidadesDisponibles")),
