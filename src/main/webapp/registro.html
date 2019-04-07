@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="proyectStyle.css">
+    <title>Crear nuevo usuario</title>
+
+</head>
+
+<body>
+<center>
+    <div id="nuevoUsuario">
+
+
+        <form action="guardaUsuario" method="POST">
+            <input type="text" class="inputdata" name="correoUsuario" placeholder="Correo electrónico..."><br>
+            <input type="password" class="inputdata" name="passwordUsuario" placeholder="Contraseña..."><br>
+            <input type = "radio" name = "USER"  value="c">Comprador
+            <input type = "radio" name = "USER"  value="v">Vendedor
+            <center><br><input type="submit" name="btn" class="button" value="Crear usuario">
+        </form>
+
+    </div>
+</center>
+</body>
+</html>

@@ -16,9 +16,9 @@ import javax.servlet.http.HttpServletResponse;
 public class Arreglos{
 
     private static Arreglos instancia = null;
-    private ArrayList<Empleado> empleados = new ArrayList();
-    private ArrayList<Proyecto> proyectos = new ArrayList();
-    private ArrayList<Relacion> relaciones = new ArrayList();
+    private ArrayList<Comprador> compradores = new ArrayList();
+    private ArrayList<Vendedor> vendedores = new ArrayList();
+    private ArrayList<Venta> Ventas = new ArrayList();
 
     public static Arreglos constructora(){
 
@@ -30,26 +30,41 @@ public class Arreglos{
     }
 
 
-    public void guardaEmpleado(Empleado emp){
-        empleados.add(emp);
+    public void guardaComprador(Comprador emp){
+        compradores.add(emp);
     }
 
-    public void guardaProyecto(Proyecto pro){
-        proyectos.add(pro);
+    public void guardaVendedor(Vendedor pro){
+        vendedores.add(pro);
     }
-    public void guardaRelacion(Relacion rel){
-        relaciones.add(rel);
+    public void guardaRelacion(Venta rel){
+        ventas.add(rel);
 
     }
-    public ArrayList<Empleado> getEmpleados(){
 
-        return this.empleados;
-    }
-    public ArrayList<Proyecto> getProyectos(){
-
-        return this.proyectos;
+    public ArrayList<Comprador> getCompradores() {
+        return compradores;
     }
 
+    public void setCompradores(ArrayList<Comprador> compradores) {
+        this.compradores = compradores;
+    }
+
+    public ArrayList<Vendedor> getVendedores() {
+        return vendedores;
+    }
+
+    public void setVendedores(ArrayList<Vendedor> vendedores) {
+        this.vendedores = vendedores;
+    }
+
+    public ArrayList<Venta> getVentas() {
+        return Ventas;
+    }
+
+    public void setVentas(ArrayList<Venta> ventas) {
+        Ventas = ventas;
+    }
 }
     
 
