@@ -44,9 +44,11 @@ public class EdicionOferta extends HttpServlet {
 
             pw.println("<br>Nombre: " + sing.getVentas().get(i).getNombre() + "<br>Lugar: " + sing.getVentas().get(i).getLugar() + "<br>Nombre vendedor: " + sing.getVentas().get(i).getNombreVendedor() +
                     "<br>Descripcion: " + sing.getVentas().get(i).getDescripcion() + "<br>Cantidad disponible:" + sing.getVentas().get(i).getCantidad() + "<br>Fecha: " + sing.getVentas().get(i).getFecha() + "<br>Precio base: " + sing.getVentas().get(i).getPrecioBase() + "<br>S" +
-                    "<br><br>");
+                    "<br><br><form action=\"editarPrecio\" method POST><input type=\"number\" name=\"edit\" placeholder=\"Editar precio\"><input type=\"submit\" value=\"Cambiar\"></form>");
         }else if(obtener.equals("el")) {
             sing.getOfertas().remove(i);
+        }else if(obtener.equals("ch")){
+
         }
 
 
@@ -55,14 +57,7 @@ public class EdicionOferta extends HttpServlet {
 
 
 
-        pw.println("<form action=\"guardaOferta\" methor=\"GET\">" +
-                "Precio a ofertar<input type=\"number\" class=\"inputdata\" name=\"precioOferta\"><br>" +
-                "Cantidades a comprar<input type=\"number\"  class=\"inputdata\" name=\"cantidadOferta\"><br>" +
-                "<input type=\"email\" class=\"inputdata\" name=\"email\" placeholder=\"e-mail del comprador ...\"><br>\n" +
-                "            <input type=\"password\" class=\"inputdata\" name=\"password\" placeholder=\"contraseña del comprador ...\"><br>" +
-                "<input type=\"hidden\"  name=\"cust\" value=\"" + i + "\">" +
 
-                "<br><input type=\"submit\" class=\"button\" value=\"Ofertar\"></form></HTML>");
         pw.close();
 
 
