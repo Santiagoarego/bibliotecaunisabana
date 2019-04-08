@@ -28,7 +28,7 @@ public class MuestraOfertas extends HttpServlet {
 
 
         pw.println("<br>" + sing.getVentas().get(i).getNombre() + "<br>" + sing.getVentas().get(i).getLugar() + "<br>" + sing.getVentas().get(i).getNombreVendedor() +
-                        "<br>" + sing.getVentas().get(i).getDescripcion() + "<br>" + sing.getVentas().get(i).getCantidad() + "<br>" + sing.getVentas().get(i).getFecha() + "<br>" + sing.getVentas().get(i).getPrecioBase()
+                        "<br>" + sing.getVentas().get(i).getDescripcion() + "<br>" + sing.getVentas().get(i).getCantidad() + "<br>" + sing.getVentas().get(i).getFecha() + "<br>" + sing.getVentas().get(i).getPrecioBase());
 
 
                 pw.println("<input type=\"submit\" value=\"Seleccionar oferta\"></form></HTML>");
