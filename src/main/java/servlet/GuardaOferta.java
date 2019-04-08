@@ -16,7 +16,7 @@ import javax.servlet.http.HttpSession;
 public class GuardaOferta extends HttpServlet {
 
 
-    public void doPost(HttpServletRequest req, HttpServletResponse res)
+    public void doGet(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException {
         res.setContentType("text/html");
         //Sirven para printear un HTML como respuesta
