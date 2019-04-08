@@ -24,7 +24,7 @@ public class GuardaOferta extends HttpServlet {
         HttpSession misession= (HttpSession) req.getSession();
         Venta miventa= (Venta)misession.getAttribute("estado");
         Arreglos sing = Arreglos.constructora();
-        if (this.existeVendedor(req.getParameter("email"), sing.getCompradores(),req.getParameter("password"))) {
+        if (this.existeVendedor(req.getParameter("email"), sing.getCompradores(),req.getParameter("password"))&& Integer.parseInt(req.getParameter("precioOferta"))>=miventa.getPrecioBase() && Integer.parseInt(req.getParameter("cantidadOferta"))<=miventa.getCantidad()) {
             Oferta ofer;
             ofer = new Oferta(miventa.getCorreoVendedor(),req.getParameter("email"),miventa.getNombre(),Integer.parseInt(req.getParameter("precioOferta")),Integer.parseInt(req.getParameter("cantidadOferta")))  ;
             sing.guardaOferta(ofer);
