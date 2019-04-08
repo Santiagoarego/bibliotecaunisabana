@@ -40,6 +40,7 @@ public class MuestraOfertas extends HttpServlet {
                         "Cantidades a comprar<input type=\"number\"  class=\"inputdata\" name=\"cantidadOferta\"><br>" +
                         "<input type=\"email\" class=\"inputdata\" name=\"email\" placeholder=\"e-mail del comprador ...\"><br>\n" +
                         "            <input type=\"password\" class=\"inputdata\" name=\"password\" placeholder=\"contraseña del comprador ...\"><br>" +
+                        "<input type=\"hidden\"  name=\"cust\" value=\""+i+"\">" +
 
                         "<br><input type=\"submit\" class=\"button\" value=\"Ofertar\"></form></HTML>");
         pw.close();

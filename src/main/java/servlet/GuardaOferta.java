@@ -20,18 +20,19 @@ public class GuardaOferta extends HttpServlet {
     public void doGet(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException {
         res.setContentType("text/html");
+        int i = req.getParameter("cust");
         //Sirven para printear un HTML como respuesta
         PrintWriter pw = res.getWriter();
         HttpSession misession = (HttpSession) req.getSession();
         Venta miventa = (Venta) misession.getAttribute("estado");
         Arreglos sing = Arreglos.constructora();
-        if (this.existeVendedor(req.getParameter("email"), sing.getCompradores(), req.getParameter("password")) && Integer.parseInt(req.getParameter("precioOferta")) >= miventa.getPrecioBase() && Integer.parseInt(req.getParameter("cantidadOferta")) <= miventa.getCantidad()) {
+        if (this.existeVendedor(req.getParameter("email"), sing.getCompradores(), req.getParameter("password")) && Integer.parseInt(req.getParameter("precioOferta")) >= sing.getVentas().get(i).getPrecioBase() && Integer.parseInt(req.getParameter("cantidadOferta")) <=sing.getVentas().get(i).getCantidad()) {
             Oferta ofer;
-            ofer = new Oferta(miventa.getCorreoVendedor(), req.getParameter("email"), miventa.getNombre(), Integer.parseInt(req.getParameter("precioOferta")), Integer.parseInt(req.getParameter("cantidadOferta")));
+            ofer = new Oferta(sing.getVentas().get(i), req.getParameter("email"), sing.getVentas().getNombre(), Integer.parseInt(req.getParameter("precioOferta")), Integer.parseInt(req.getParameter("cantidadOferta")));
             sing.guardaOferta(ofer);
 
             pw.println("<HTML><SCRIPT>alert(\"Oferta Registrado\"); </SCRIPT>");
-            pw.println("<script>alert(\"guardo \" + miventa.getCorreoVendedor());window.history.back();</script>");
+            pw.println("<script>alert(\"guardo \" );window.history.back();</script>");
             pw.close();
         } else {
             pw.println("<HTML><SCRIPT>alert(\"Correo,contraseña, cantidad de articulos o precio erroneo\"); window.history.back();</SCRIPT></HTML>");
