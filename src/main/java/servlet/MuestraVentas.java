@@ -24,7 +24,7 @@ public class MuestraVentas extends HttpServlet {
 
         Arreglos sing = Arreglos.constructora();
         pw.println("<HTML><TITLE>VENTAS</TITLE>");
-        for (i = 0; i < sing.getVentas(); i++) {
+        for (int i = 0; i < sing.getVentas(); i++) {
             pw.println("<br>" + sing.getVentas().get(i).getNombre() + "<br>" + sing.getVentas().get(i).getLugar() + "<br>" + sing.getVentas().get(i).getNombreVendedor() +
                     "<br>" + sing.getVentas().get(i).getDescripcion() + "<br>" + sing.getVentas().get(i).getCantidad() +"<br>"+sing.getVentas().get(i).getFecha()+"<br>"+sing.getVentas().get(i).getPrecioBase()+"<br><br>");
         }
