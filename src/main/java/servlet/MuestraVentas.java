@@ -23,10 +23,10 @@ public class MuestraVentas extends HttpServlet {
         PrintWriter pw = res.getWriter();
 
         Arreglos sing = Arreglos.constructora();
-        pw.println("<HTML><TITLE>VENTAS</TITLE>");
+        pw.println("<HTML><head><TITLE>VENTAS</TITLE><link rel=\"stylesheet\" type=\"text/css\" href=\"/webbapp/proyectStyle.css\"></HEAD>");
         for (int i = 0; i < sing.getVentas().size(); i++) {
             pw.println("<br>" + sing.getVentas().get(i).getNombre() + "<br>" + sing.getVentas().get(i).getLugar() + "<br>" + sing.getVentas().get(i).getNombreVendedor() +
-                    "<br>" + sing.getVentas().get(i).getDescripcion() + "<br>" + sing.getVentas().get(i).getCantidad() +"<br>"+sing.getVentas().get(i).getFecha()+"<br>"+sing.getVentas().get(i).getPrecioBase()+"Seleccionar" +
+                    "<br>" + sing.getVentas().get(i).getDescripcion() + "<br>" + sing.getVentas().get(i).getCantidad() +"<br>"+sing.getVentas().get(i).getFecha()+"<br>"+sing.getVentas().get(i).getPrecioBase()+"<br>Seleccionar" +
                     "<input type=\"radio\" name=\"venta\" value=\""+i+"\"<br><br>");
         }
         pw.println("</HTML>");
