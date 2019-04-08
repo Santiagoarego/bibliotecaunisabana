@@ -35,14 +35,17 @@ public class VerOfertas extends HttpServlet {
                 pw.println("<br>Correo Comprador: " + sing.getOfertas().get(i).getCorreoComprador() + "<br>Nombre oferta:" + sing.getOfertas().get(i).getNombreOferta() + "<br>Precio ofertado: " + sing.getOfertas().get(i).getPrecioOferta() +
                         "<br>Cantidad pedida:" + sing.getOfertas().get(i).getCantidadOferta()
                         );
+                "<br>Seleccionar<input type=\"radio\" name=\"venta\" value=\""+i+"\"><br><br>");
             }
         }
-
-
-
-
-
+        pw.println("<input type=\"submit\" class=\"button\" value=\"Seleccionar oferta\"></form></HTML>");
         pw.close();
+
+
+
+
+
+       
 
 
     }
