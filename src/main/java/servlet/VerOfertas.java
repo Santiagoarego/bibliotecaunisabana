@@ -30,6 +30,7 @@ public class VerOfertas extends HttpServlet {
         pw.println("<HTML><head><TITLE>VENTAS</TITLE><link rel=\"stylesheet\" type=\"text/css\" href=\"https://immense-shore-57264.herokuapp.com/proyectStyle.css\"></HEAD>");
 
         for (int i = 0; i < sing.getOfertas().size(); i++) {
+            pw.println(i+"<br>")
             if (sing.getOfertas().get(i).getCorreoVendedor().equalsIgnoreCase(req.getParameter("correo"))) {
                 pw.println("<br>" + sing.getOfertas().get(i).getCorreoComprador() + "<br>" + sing.getOfertas().get(i).getNombreOferta() + "<br>" + sing.getOfertas().get(i).getPrecioOferta() +
                         "<br>" + sing.getOfertas().get(i).getCantidadOferta()
