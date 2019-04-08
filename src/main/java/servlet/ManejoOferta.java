@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
 @WebServlet(
         name = "manejooferta",
         urlPatterns = {"/manejoOferta"}
@@ -30,12 +31,13 @@ public class ManejoOferta extends HttpServlet {
 
 
         pw.println("<br>Correo Comprador: " + sing.getOfertas().get(i).getCorreoComprador() + "<br>Nombre oferta:" + sing.getOfertas().get(i).getNombreOferta() + "<br>Precio ofertado: " + sing.getOfertas().get(i).getPrecioOferta() +
-                "<br>Cantidad pedida:" + sing.getOfertas().get(i).getCantidadOferta()+
-
-                "<br>Modificar precio<input type=\"radio\" name=\"venta\" value=\"mod\"><br><br>" +
-                "<br>Aceptar<input type=\"radio\" name=\"venta\" value=\"ace\"><br><br>" +
-                "<br>Eliminar<input type=\"radio\" name=\"venta\" value=\"el\"><br><br>"+
-                        "<br><input type=\"submit\" class=\"button\" value=\"Ofertar\"></form></HTML>");
+                        "<br>Cantidad pedida:" + sing.getOfertas().get(i).getCantidadOferta() +
+                        "<form action=\"edicionOferta\" method=\"POST\">"
+                "<br><br>Modificar precio<input type=\"radio\" name=\"venta\" value=\"mod\"><br>" +
+                        "<br>Aceptar<input type=\"radio\" name=\"venta\" value=\"ace\"><br>" +
+                        "<br>Eliminar<input type=\"radio\" name=\"venta\" value=\"el\"><br><br>" +
+                        "<br>Chat: <input type=\"radio\" name=\"venta\" value=\"ch\">" +
+                        "<input type=\"hidden\"  name=\"cust\" value=\""+i+"\"><br><input type=\"submit\" class=\"button\" value=\"Seleccionar opcion\"></form></HTML>");
         pw.close();
 
 
