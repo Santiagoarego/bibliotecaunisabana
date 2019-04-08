@@ -20,7 +20,7 @@ public class MuestraOfertas extends HttpServlet {
             throws ServletException, IOException {
         res.setContentType("text/html");
         //Sirven para printear un HTML como respuesta
-        int i = Integer.ParseInt(req.getParameter("venta"));
+        int i = Integer.parseInt(req.getParameter("venta"));
         PrintWriter pw = res.getWriter();
 
         Arreglos sing = Arreglos.constructora();
