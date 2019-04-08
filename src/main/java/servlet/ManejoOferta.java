@@ -34,7 +34,7 @@ public class ManejoOferta extends HttpServlet {
 
                 "<br>Modificar precio<input type=\"radio\" name=\"venta\" value=\"mod\"><br><br>" +
                 "<br>Aceptar<input type=\"radio\" name=\"venta\" value=\"ace\"><br><br>" +
-                "<br>Eliminar<input type=\"radio\" name=\"venta\" value=\"el\"><br><br>";
+                "<br>Eliminar<input type=\"radio\" name=\"venta\" value=\"el\"><br><br>"+
                         "<br><input type=\"submit\" class=\"button\" value=\"Ofertar\"></form></HTML>");
         pw.close();
 
