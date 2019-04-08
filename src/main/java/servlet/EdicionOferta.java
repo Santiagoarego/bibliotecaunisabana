@@ -31,31 +31,30 @@ public class EdicionOferta extends HttpServlet {
         pw.println("<HTML><head><TITLE>VENTAS</TITLE><link rel=\"stylesheet\" type=\"text/css\" href=\"https://immense-shore-57264.herokuapp.com/proyectStyle.css\"></HEAD>");
 
 
-        switch (obtener) {
-            case "ace":
-                pw.println("<br>Correo"+sing.getOfertas().get(i).getCorreoVendedor()
-                        );
-                for(int j =0;j<sing.getVentas().size;j++){
-                    if(sing.getVentas().get(j).getCorreoVendedor().equalsIgnoreCase(sing.getOfertas().get(i).getCorreoVendedor())){
-                        sing.getVentas().get(j).setCantidad( sing.getVentas().get(j).getCantidad()-sing.getOfertas().get(i).getCantidadOferta());
-                    }
+        if(obtener.equals("ace")) {
+            pw.println("<br>Correo" + sing.getOfertas().get(i).getCorreoVendedor()
+            );
+            for (int j = 0; j < sing.getVentas().size(); j++) {
+                if (sing.getVentas().get(j).getCorreoVendedor().equalsIgnoreCase(sing.getOfertas().get(i).getCorreoVendedor())) {
+                    sing.getVentas().get(j).setCantidad(sing.getVentas().get(j).getCantidad() - sing.getOfertas().get(i).getCantidadOferta());
                 }
-                sing.getOfertas().remove(i);
-                break;
+            }
+            sing.getOfertas().remove(i);
+        }else if(obtener.equals("mod")) {
 
-            case "mod":
-                pw.println("<br>Nombre: " + sing.getVentas().get(i).getNombre() + "<br>Lugar: " + sing.getVentas().get(i).getLugar() + "<br>Nombre vendedor: " + sing.getVentas().get(i).getNombreVendedor() +
-                        "<br>Descripcion: " + sing.getVentas().get(i).getDescripcion() + "<br>Cantidad disponible:" + sing.getVentas().get(i).getCantidad() + "<br>Fecha: " + sing.getVentas().get(i).getFecha() + "<br>Precio base: " + sing.getVentas().get(i).getPrecioBase() + "<br>S" +
-                        "<br><br>");
-                break;
-            case "el":
-                sing.getOfertas().remove(i);
-
-                break;
-
-            case "ch":
-                break;
+            pw.println("<br>Nombre: " + sing.getVentas().get(i).getNombre() + "<br>Lugar: " + sing.getVentas().get(i).getLugar() + "<br>Nombre vendedor: " + sing.getVentas().get(i).getNombreVendedor() +
+                    "<br>Descripcion: " + sing.getVentas().get(i).getDescripcion() + "<br>Cantidad disponible:" + sing.getVentas().get(i).getCantidad() + "<br>Fecha: " + sing.getVentas().get(i).getFecha() + "<br>Precio base: " + sing.getVentas().get(i).getPrecioBase() + "<br>S" +
+                    "<br><br>");
+        }else if(obtener.equals("el")) {
+            sing.getOfertas().remove(i);
         }
+
+
+
+
+
+
+
         pw.println("<form action=\"guardaOferta\" methor=\"GET\">" +
                 "Precio a ofertar<input type=\"number\" class=\"inputdata\" name=\"precioOferta\"><br>" +
                 "Cantidades a comprar<input type=\"number\"  class=\"inputdata\" name=\"cantidadOferta\"><br>" +
