@@ -22,7 +22,7 @@ public class MuestraOfertas extends HttpServlet {
         //Sirven para printear un HTML como respuesta
         int i = Integer.parseInt(req.getParameter("venta"));
         PrintWriter pw = res.getWriter();
-        HttpSession misession= request.getSession(true);
+        HttpSession misession= req.getSession(true);
 
         Arreglos sing = Arreglos.constructora();
         misession.setAttribute("estado",sing.getVentas().get(i));

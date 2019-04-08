@@ -21,7 +21,7 @@ public class GuardaOferta extends HttpServlet {
         res.setContentType("text/html");
         //Sirven para printear un HTML como respuesta
         PrintWriter pw = res.getWriter();
-        HttpSession misession= (HttpSession) request.getSession();
+        HttpSession misession= (HttpSession) req.getSession();
         Venta miventa= (Venta)misession.getAttribute("estado");
         Arreglos sing = Arreglos.constructora();
         if (this.existeVendedor(req.getParameter("email"), sing.getCompradores(),req.getParameter("password"))) {
