@@ -8,7 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import javax.servlet.http.HttpSession;
 @WebServlet(
         name = "muestraoferta",
         urlPatterns = {"/muestraOfertas"}
@@ -22,8 +22,10 @@ public class MuestraOfertas extends HttpServlet {
         //Sirven para printear un HTML como respuesta
         int i = Integer.parseInt(req.getParameter("venta"));
         PrintWriter pw = res.getWriter();
+        HttpSession misession= request.getSession(true);
 
         Arreglos sing = Arreglos.constructora();
+        misession.setAttribute("estado",sing.getVentas().get(i));
         pw.println("<HTML><head><TITLE>VENTAS</TITLE><link rel=\"stylesheet\" type=\"text/css\" href=\"/webbapp/proyectStyle.css\"></HEAD>");
 
 
@@ -36,6 +38,9 @@ public class MuestraOfertas extends HttpServlet {
                 pw.println("<form action=\"generaOferta\" methor=\"POST\">" +
                         "Precio a ofertar<input type=\"number\" name=\"precioOferta\"><br>" +
                         "Cantidades a comprar<input type=\"number\" name=\"cantidadOferta\">" +
+                        "<input type=\"email\" class=\"inputdata\" name=\"email\" placeholder=\"e-mail del comprador ...\"><br>\n" +
+                        "            <input type=\"password\" class=\"inputdata\" name=\"password\" placeholder=\"contraseña del vendedor ...\"><br>" +
+
                         "<br><input type=\"submit\" value=\"Ofertar\"></form></HTML>");
         pw.close();
 

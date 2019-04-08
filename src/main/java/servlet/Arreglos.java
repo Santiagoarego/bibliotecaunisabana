@@ -19,7 +19,7 @@ public class Arreglos {
     private ArrayList<Comprador> compradores = new ArrayList();
     private ArrayList<Vendedor> vendedores = new ArrayList();
     private ArrayList<Venta> ventas = new ArrayList();
-
+    private ArrayList<Oferta> ofertas = new ArrayList();
     public static Arreglos constructora() {
 
         if (instancia == null) {
@@ -40,6 +40,10 @@ public class Arreglos {
 
     public void guardaVenta(Venta rel) {
         ventas.add(rel);
+
+    }
+    public void guardaOferta(Oferta rel) {
+        ofertas.add(rel);
 
     }
 
@@ -65,5 +69,13 @@ public class Arreglos {
 
     public void setVentas(ArrayList<Venta> ventas) {
         this.ventas = ventas;
+    }
+
+    public ArrayList<Oferta> getOfertas() {
+        return ofertas;
+    }
+
+    public void setOfertas(ArrayList<Oferta> ofertas) {
+        this.ofertas = ofertas;
     }
 }
