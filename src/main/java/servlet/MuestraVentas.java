@@ -26,9 +26,9 @@ public class MuestraVentas extends HttpServlet {
         pw.println("<HTML><head><TITLE>VENTAS</TITLE><link rel=\"stylesheet\" type=\"text/css\" href=\"https://immense-shore-57264.herokuapp.com/proyectStyle.css\"></HEAD>" +
                 "<form action=\"muestraOfertas\" method=\"POST\">");
         for (int i = 0; i < sing.getVentas().size(); i++) {
-            pw.println("<br>" + sing.getVentas().get(i).getNombre() + "<br>" + sing.getVentas().get(i).getLugar() + "<br>" + sing.getVentas().get(i).getNombreVendedor() +
-                    "<br>" + sing.getVentas().get(i).getDescripcion() + "<br>" + sing.getVentas().get(i).getCantidad() +"<br>"+sing.getVentas().get(i).getFecha()+"<br>"+sing.getVentas().get(i).getPrecioBase()+"<br>Seleccionar" +
-                    "<input type=\"radio\" name=\"venta\" value=\""+i+"\"<br><br>");
+            pw.println("<br>Nombre: " + sing.getVentas().get(i).getNombre() + "<br>Lugar: " + sing.getVentas().get(i).getLugar() + "<br>Nombre vendedor: " + sing.getVentas().get(i).getNombreVendedor() +
+                    "<br>Descripcion: " + sing.getVentas().get(i).getDescripcion() + "<br>Cantidad disponible:" + sing.getVentas().get(i).getCantidad() +"<br>Fecha: "+sing.getVentas().get(i).getFecha()+"<br>Precio base: "+sing.getVentas().get(i).getPrecioBase()+"<br>Seleccionar" +
+                    "<input type=\"radio\" name=\"venta\" value=\""+i+"\"><br><br>");
         }
         pw.println("<input type=\"submit\" class=\"button\" value=\"Seleccionar oferta\"></form></HTML>");
         pw.close();

@@ -29,10 +29,9 @@ public class MuestraOfertas extends HttpServlet {
         pw.println("<HTML><head><TITLE>VENTAS</TITLE><link rel=\"stylesheet\" type=\"text/css\" href=\"https://immense-shore-57264.herokuapp.com/proyectStyle.css\"></HEAD>");
 
 
-        pw.println("<br>" + sing.getVentas().get(i).getNombre() + "<br>" + sing.getVentas().get(i).getLugar() + "<br>" + sing.getVentas().get(i).getNombreVendedor() +
-                        "<br>" + sing.getVentas().get(i).getDescripcion()
-                + "<br>" + sing.getVentas().get(i).getCantidad() + "<br>" + sing.getVentas().get(i).getFecha()
-                + "<br>" + sing.getVentas().get(i).getPrecioBase());
+        pw.println("<br>Nombre: " + sing.getVentas().get(i).getNombre() + "<br>Lugar: " + sing.getVentas().get(i).getLugar() + "<br>Nombre vendedor: " + sing.getVentas().get(i).getNombreVendedor() +
+                "<br>Descripcion: " + sing.getVentas().get(i).getDescripcion() + "<br>Cantidad disponible:" + sing.getVentas().get(i).getCantidad() +"<br>Fecha: "+sing.getVentas().get(i).getFecha()+"<br>Precio base: "+sing.getVentas().get(i).getPrecioBase()+"<br>Seleccionar" +
+                "<br><br>");
 
 
                 pw.println("<form action=\"guardaOferta\" methor=\"GET\">" +

@@ -32,8 +32,8 @@ public class VerOfertas extends HttpServlet {
         for (int i = 0; i < sing.getOfertas().size(); i++) {
             pw.println(i+"<br>");
             if (sing.getOfertas().get(i).getCorreoVendedor().equalsIgnoreCase(req.getParameter("correoUsuario"))) {
-                pw.println("<br>" + sing.getOfertas().get(i).getCorreoComprador() + "<br>" + sing.getOfertas().get(i).getNombreOferta() + "<br>" + sing.getOfertas().get(i).getPrecioOferta() +
-                        "<br>" + sing.getOfertas().get(i).getCantidadOferta()
+                pw.println("<br>Correo Comprador: " + sing.getOfertas().get(i).getCorreoComprador() + "<br>Nombre oferta:" + sing.getOfertas().get(i).getNombreOferta() + "<br>Precio ofertado: " + sing.getOfertas().get(i).getPrecioOferta() +
+                        "<br>Cantidad pedida:" + sing.getOfertas().get(i).getCantidadOferta()
                         );
             }
         }
