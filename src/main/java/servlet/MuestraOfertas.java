@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 public class MuestraOfertas extends HttpServlet {
 
 
-    public void doGet(HttpServletRequest req, HttpServletResponse res)
+    public void doPost(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException {
         res.setContentType("text/html");
         //Sirven para printear un HTML como respuesta
