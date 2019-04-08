@@ -26,7 +26,7 @@ public class MuestraOfertas extends HttpServlet {
 
         Arreglos sing = Arreglos.constructora();
         misession.setAttribute("estado",sing.getVentas().get(i));
-        pw.println("<HTML><head><TITLE>VENTAS</TITLE><link rel=\"stylesheet\" type=\"text/css\" href=\"/webbapp/proyectStyle.css\"></HEAD>");
+        pw.println("<HTML><head><TITLE>VENTAS</TITLE><link rel=\"stylesheet\" type=\"text/css\" href=\"https://immense-shore-57264.herokuapp.com/proyectStyle.css\"></HEAD>");
 
 
         pw.println("<br>" + sing.getVentas().get(i).getNombre() + "<br>" + sing.getVentas().get(i).getLugar() + "<br>" + sing.getVentas().get(i).getNombreVendedor() +
@@ -36,12 +36,12 @@ public class MuestraOfertas extends HttpServlet {
 
 
                 pw.println("<form action=\"guardaOferta\" methor=\"GET\">" +
-                        "Precio a ofertar<input type=\"number\" name=\"precioOferta\"><br>" +
-                        "Cantidades a comprar<input type=\"number\" name=\"cantidadOferta\"><br>" +
+                        "Precio a ofertar<input type=\"number\" class=\"inputdata\" name=\"precioOferta\"><br>" +
+                        "Cantidades a comprar<input type=\"number\"  class=\"inputdata\" name=\"cantidadOferta\"><br>" +
                         "<input type=\"email\" class=\"inputdata\" name=\"email\" placeholder=\"e-mail del comprador ...\"><br>\n" +
                         "            <input type=\"password\" class=\"inputdata\" name=\"password\" placeholder=\"contraseña del comprador ...\"><br>" +
 
-                        "<br><input type=\"submit\" value=\"Ofertar\"></form></HTML>");
+                        "<br><input type=\"submit\" class=\"button\" value=\"Ofertar\"></form></HTML>");
         pw.close();
 
 

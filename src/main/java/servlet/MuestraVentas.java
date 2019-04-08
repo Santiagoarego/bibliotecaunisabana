@@ -30,7 +30,7 @@ public class MuestraVentas extends HttpServlet {
                     "<br>" + sing.getVentas().get(i).getDescripcion() + "<br>" + sing.getVentas().get(i).getCantidad() +"<br>"+sing.getVentas().get(i).getFecha()+"<br>"+sing.getVentas().get(i).getPrecioBase()+"<br>Seleccionar" +
                     "<input type=\"radio\" name=\"venta\" value=\""+i+"\"<br><br>");
         }
-        pw.println("<input type=\"submit\" value=\"Seleccionar oferta\"></form></HTML>");
+        pw.println("<input type=\"submit\" class=\"button\" value=\"Seleccionar oferta\"></form></HTML>");
         pw.close();
 
 
