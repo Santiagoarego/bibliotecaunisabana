@@ -33,7 +33,7 @@ public class GuardaOferta extends HttpServlet {
 
             pw.println("<HTML><SCRIPT>alert(\"Oferta Registrado\"); </SCRIPT>");
             pw.println("<script>alert(\"guardo \" );</script>");
-            pw.println(sing.getVentas().get(i).getCorreoVendedor());
+            pw.println(sing.getVentas().get(i).getCorreoVendedor()+i);
             pw.close();
         } else {
             pw.println("<HTML><SCRIPT>alert(\"Correo,contraseña, cantidad de articulos o precio erroneo\"); window.history.back();</SCRIPT></HTML>");
