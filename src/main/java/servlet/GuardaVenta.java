@@ -29,6 +29,9 @@ public class GuardaVenta extends HttpServlet {
                     , req.getParameter("nombreVendedor"), req.getParameter("descripcionProducto"), Integer.parseInt(req.getParameter("unidadesDisponibles")),
                     req.getParameter("fecha"), Integer.parseInt(req.getParameter("precioUnidad")));
             sing.guardaVenta(vent);
+            req.setAttribute("unEntero", new Integer(22));
+
+            resp.getRequestDispatcher("destino.jsp").forward(req, resp);
             pw.println("<HTML><SCRIPT>alert(\"Venta Registrado\"); window.history.back();</SCRIPT></HTML>");
             pw.close();
         }else{

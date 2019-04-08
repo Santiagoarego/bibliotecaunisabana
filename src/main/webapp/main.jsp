@@ -9,7 +9,7 @@
 Arreglos sin = new Arreglos();
 
 	ArrayList<Venta> ventas = Arreglos.getVentas();
-	
+
 %>
 <%
 	String valor ="";
@@ -46,5 +46,6 @@ Arreglos sin = new Arreglos();
 		}
 	}
 %>
+<p>Me ha llegado <%= request.getAttribute("unEntero") %></p>
 </body>
 </html>
