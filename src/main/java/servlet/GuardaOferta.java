@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
 @WebServlet(
         name = "GO",
         urlPatterns = {"/guardaOferta"}
@@ -21,23 +22,20 @@ public class GuardaOferta extends HttpServlet {
         res.setContentType("text/html");
         //Sirven para printear un HTML como respuesta
         PrintWriter pw = res.getWriter();
-        HttpSession misession= (HttpSession) req.getSession();
-        Venta miventa= (Venta)misession.getAttribute("estado");
+        HttpSession misession = (HttpSession) req.getSession();
+        Venta miventa = (Venta) misession.getAttribute("estado");
         Arreglos sing = Arreglos.constructora();
-        if (this.existeVendedor(req.getParameter("email"), sing.getCompradores(),req.getParameter("password"))&& Integer.parseInt(req.getParameter("precioOferta"))>=miventa.getPrecioBase() && Integer.parseInt(req.getParameter("cantidadOferta"))<=miventa.getCantidad()) {
+        if (this.existeVendedor(req.getParameter("email"), sing.getCompradores(), req.getParameter("password")) && Integer.parseInt(req.getParameter("precioOferta")) >= miventa.getPrecioBase() && Integer.parseInt(req.getParameter("cantidadOferta")) <= miventa.getCantidad()) {
             Oferta ofer;
-            ofer = new Oferta(miventa.getCorreoVendedor(),req.getParameter("email"),miventa.getNombre(),Integer.parseInt(req.getParameter("precioOferta")),Integer.parseInt(req.getParameter("cantidadOferta")))  ;
+            ofer = new Oferta(miventa.getCorreoVendedor(), req.getParameter("email"), miventa.getNombre(), Integer.parseInt(req.getParameter("precioOferta")), Integer.parseInt(req.getParameter("cantidadOferta")));
             sing.guardaOferta(ofer);
-
+            pw.println("guardo " + miventa.getCorreoVendedor())
             pw.println("<HTML><SCRIPT>alert(\"Oferta Registrado\"); window.history.back();</SCRIPT></HTML>");
             pw.close();
-        }else{
+        } else {
             pw.println("<HTML><SCRIPT>alert(\"Correo,contraseña, cantidad de articulos o precio erroneo\"); window.history.back();</SCRIPT></HTML>");
             pw.close();
         }
-
-
-
 
 
     }
