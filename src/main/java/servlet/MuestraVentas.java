@@ -26,7 +26,8 @@ public class MuestraVentas extends HttpServlet {
         pw.println("<HTML><TITLE>VENTAS</TITLE>");
         for (int i = 0; i < sing.getVentas().size(); i++) {
             pw.println("<br>" + sing.getVentas().get(i).getNombre() + "<br>" + sing.getVentas().get(i).getLugar() + "<br>" + sing.getVentas().get(i).getNombreVendedor() +
-                    "<br>" + sing.getVentas().get(i).getDescripcion() + "<br>" + sing.getVentas().get(i).getCantidad() +"<br>"+sing.getVentas().get(i).getFecha()+"<br>"+sing.getVentas().get(i).getPrecioBase()+"<br><br>");
+                    "<br>" + sing.getVentas().get(i).getDescripcion() + "<br>" + sing.getVentas().get(i).getCantidad() +"<br>"+sing.getVentas().get(i).getFecha()+"<br>"+sing.getVentas().get(i).getPrecioBase()+"Seleccionar" +
+                    "<input type=\"radio\" name=\"venta\" value=\""+i+"\"<br><br>");
         }
         pw.println("</HTML>");
         pw.close();
