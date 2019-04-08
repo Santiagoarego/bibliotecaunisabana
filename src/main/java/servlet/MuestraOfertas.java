@@ -37,9 +37,9 @@ public class MuestraOfertas extends HttpServlet {
 
                 pw.println("<form action=\"guardaOferta\" methor=\"GET\">" +
                         "Precio a ofertar<input type=\"number\" name=\"precioOferta\"><br>" +
-                        "Cantidades a comprar<input type=\"number\" name=\"cantidadOferta\">" +
+                        "Cantidades a comprar<input type=\"number\" name=\"cantidadOferta\"><br>" +
                         "<input type=\"email\" class=\"inputdata\" name=\"email\" placeholder=\"e-mail del comprador ...\"><br>\n" +
-                        "            <input type=\"password\" class=\"inputdata\" name=\"password\" placeholder=\"contraseña del vendedor ...\"><br>" +
+                        "            <input type=\"password\" class=\"inputdata\" name=\"password\" placeholder=\"contraseña del comprador ...\"><br>" +
 
                         "<br><input type=\"submit\" value=\"Ofertar\"></form></HTML>");
         pw.close();

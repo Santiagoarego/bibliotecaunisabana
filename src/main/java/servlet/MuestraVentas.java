@@ -23,7 +23,7 @@ public class MuestraVentas extends HttpServlet {
         PrintWriter pw = res.getWriter();
 
         Arreglos sing = Arreglos.constructora();
-        pw.println("<HTML><head><TITLE>VENTAS</TITLE><link rel=\"stylesheet\" type=\"text/css\" href=\"/webbapp/proyectStyle.css\"></HEAD>" +
+        pw.println("<HTML><head><TITLE>VENTAS</TITLE><link rel=\"stylesheet\" type=\"text/css\" href=\"https://immense-shore-57264.herokuapp.com/proyectStyle.css\"></HEAD>" +
                 "<form action=\"muestraOfertas\" method=\"POST\">");
         for (int i = 0; i < sing.getVentas().size(); i++) {
             pw.println("<br>" + sing.getVentas().get(i).getNombre() + "<br>" + sing.getVentas().get(i).getLugar() + "<br>" + sing.getVentas().get(i).getNombreVendedor() +
