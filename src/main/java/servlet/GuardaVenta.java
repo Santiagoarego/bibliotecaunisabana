@@ -31,7 +31,7 @@ public class GuardaVenta extends HttpServlet {
             sing.guardaVenta(vent);
             req.setAttribute("unEntero", new Integer(22));
 
-            res.getRequestDispatcher("destino.jsp").forward(req, resp);
+            res.getRequestDispatcher("main.jsp").forward(req, resp);
             pw.println("<HTML><SCRIPT>alert(\"Venta Registrado\"); window.history.back();</SCRIPT></HTML>");
             pw.close();
         }else{
