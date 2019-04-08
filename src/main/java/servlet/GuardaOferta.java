@@ -20,7 +20,7 @@ public class GuardaOferta extends HttpServlet {
     public void doGet(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException {
         res.setContentType("text/html");
-        int i = req.getParameter("cust");
+        int i = Integer.parseInt(req.getParameter("cust"));
         //Sirven para printear un HTML como respuesta
         PrintWriter pw = res.getWriter();
         HttpSession misession = (HttpSession) req.getSession();
@@ -28,7 +28,7 @@ public class GuardaOferta extends HttpServlet {
         Arreglos sing = Arreglos.constructora();
         if (this.existeVendedor(req.getParameter("email"), sing.getCompradores(), req.getParameter("password")) && Integer.parseInt(req.getParameter("precioOferta")) >= sing.getVentas().get(i).getPrecioBase() && Integer.parseInt(req.getParameter("cantidadOferta")) <=sing.getVentas().get(i).getCantidad()) {
             Oferta ofer;
-            ofer = new Oferta(sing.getVentas().get(i), req.getParameter("email"), sing.getVentas().getNombre(), Integer.parseInt(req.getParameter("precioOferta")), Integer.parseInt(req.getParameter("cantidadOferta")));
+            ofer = new Oferta(sing.getVentas().get(i).getCorreoVendedor(), req.getParameter("email"), sing.getVentas().getNombreVendedor(), Integer.parseInt(req.getParameter("precioOferta")), Integer.parseInt(req.getParameter("cantidadOferta")));
             sing.guardaOferta(ofer);
 
             pw.println("<HTML><SCRIPT>alert(\"Oferta Registrado\"); </SCRIPT>");
