@@ -28,11 +28,12 @@ public class GuardaOferta extends HttpServlet {
         Arreglos sing = Arreglos.constructora();
         if (this.existeVendedor(req.getParameter("email"), sing.getCompradores(), req.getParameter("password")) && Integer.parseInt(req.getParameter("precioOferta")) >= sing.getVentas().get(i).getPrecioBase() && Integer.parseInt(req.getParameter("cantidadOferta")) <=sing.getVentas().get(i).getCantidad()) {
             Oferta ofer;
-            ofer = new Oferta(sing.getVentas().get(i).getCorreoVendedor(), req.getParameter("email"), sing.getVentas().get(i).getNombreVendedor(), Integer.parseInt(req.getParameter("precioOferta")), Integer.parseInt(req.getParameter("cantidadOferta")));
+            ofer = new Oferta(sing.getVentas().get(i).getCorreoVendedor(), req.getParameter("email"), sing.getVentas().get(i).getNombre(), Integer.parseInt(req.getParameter("precioOferta")), Integer.parseInt(req.getParameter("cantidadOferta")));
             sing.guardaOferta(ofer);
 
             pw.println("<HTML><SCRIPT>alert(\"Oferta Registrado\"); </SCRIPT>");
-            pw.println("<script>alert(\"guardo \" );window.history.back();</script>");
+            pw.println("<script>alert(\"guardo \" );</script>");
+            pw.println(sing.getVentas().get(i).getCorreoVendedor());
             pw.close();
         } else {
             pw.println("<HTML><SCRIPT>alert(\"Correo,contraseña, cantidad de articulos o precio erroneo\"); window.history.back();</SCRIPT></HTML>");
