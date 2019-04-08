@@ -37,7 +37,7 @@ public class EdicionOferta extends HttpServlet {
                         );
                 for(int j =0;j<sing.getVentas().size;j++){
                     if(sing.getVentas().get(j).getCorreoVendedor().equalsIgnoreCase(sing.getOfertas().get(i).getCorreoVendedor())){
-                        sing.getVentas.()get(j).setCantidad( sing.getVentas.()get(j).getCantidad()-sing.getOfertas().get(i).getCantidadOferta());
+                        sing.getVentas().get(j).setCantidad( sing.getVentas().get(j).getCantidad()-sing.getOfertas().get(i).getCantidadOferta());
                     }
                 }
                 sing.getOfertas().remove(i);
