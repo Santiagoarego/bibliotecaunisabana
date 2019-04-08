@@ -32,7 +32,7 @@ public class ManejoOferta extends HttpServlet {
 
         pw.println("<br>Correo Comprador: " + sing.getOfertas().get(i).getCorreoComprador() + "<br>Nombre oferta:" + sing.getOfertas().get(i).getNombreOferta() + "<br>Precio ofertado: " + sing.getOfertas().get(i).getPrecioOferta() +
                         "<br>Cantidad pedida:" + sing.getOfertas().get(i).getCantidadOferta() +
-                        "<form action=\"edicionOferta\" method=\"POST\">"
+                        "<form action=\"edicionOferta\" method=\"POST\">"+
                 "<br><br>Modificar precio<input type=\"radio\" name=\"venta\" value=\"mod\"><br>" +
                         "<br>Aceptar<input type=\"radio\" name=\"venta\" value=\"ace\"><br>" +
                         "<br>Eliminar<input type=\"radio\" name=\"venta\" value=\"el\"><br><br>" +
