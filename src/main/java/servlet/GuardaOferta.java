@@ -29,7 +29,7 @@ public class GuardaOferta extends HttpServlet {
             Oferta ofer;
             ofer = new Oferta(miventa.getCorreoVendedor(), req.getParameter("email"), miventa.getNombre(), Integer.parseInt(req.getParameter("precioOferta")), Integer.parseInt(req.getParameter("cantidadOferta")));
             sing.guardaOferta(ofer);
-            pw.println("guardo " + miventa.getCorreoVendedor());
+            pw.println("<script>alert(\"guardo \" + miventa.getCorreoVendedor());<script>)");
             pw.println("<HTML><SCRIPT>alert(\"Oferta Registrado\"); window.history.back();</SCRIPT></HTML>");
             pw.close();
         } else {
