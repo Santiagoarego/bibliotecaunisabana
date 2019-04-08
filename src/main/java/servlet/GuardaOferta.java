@@ -26,7 +26,7 @@ public class GuardaOferta extends HttpServlet {
         Arreglos sing = Arreglos.constructora();
         if (this.existeVendedor(req.getParameter("email"), sing.getCompradores(),req.getParameter("password"))) {
             Oferta ofer;
-            ofer = new Oferta(miventa.getCorrreoComprador(),req.getParameter("email"),miventa.getNombre(),Integer.parseInt(req.getParameter("precioOferta")),Integer.parseInt(req.getParameter("cantidadOferta")))  ;
+            ofer = new Oferta(miventa.getCorreoComprador(),req.getParameter("email"),miventa.getNombre(),Integer.parseInt(req.getParameter("precioOferta")),Integer.parseInt(req.getParameter("cantidadOferta")))  ;
             sing.guardaOferta(ofer);
 
             pw.println("<HTML><SCRIPT>alert(\"Venta Registrado\"); window.history.back();</SCRIPT></HTML>");
