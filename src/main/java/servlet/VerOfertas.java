@@ -32,7 +32,7 @@ public class VerOfertas extends HttpServlet {
         for (int i = 0; i < sing.getOfertas().size(); i++) {
             pw.println("<form action=\"manejoOferta\" method=\"POST\">");
             if (sing.getOfertas().get(i).getCorreoVendedor().equalsIgnoreCase(req.getParameter("correoUsuario"))) {
-                pw.println("<br>Correo Comprador: " + sing.getOfertas().get(i).getCorreoComprador() + "<br>Nombre oferta:" + sing.getOfertas().get(i).getNombreOferta() + "<br>Precio ofertado: " + sing.getOfertas().get(i).getPrecioOferta() +
+                pw.println("<br>asasaCorreo Comprador: " + sing.getOfertas().get(i).getCorreoComprador() + "<br>Nombre oferta:" + sing.getOfertas().get(i).getNombreOferta() + "<br>Precio ofertado: " + sing.getOfertas().get(i).getPrecioOferta() +
                         "<br>Cantidad pedida:" + sing.getOfertas().get(i).getCantidadOferta()+
 
                 "<br>Seleccionar<input type=\"radio\" name=\"venta\" value=\""+i+"\"><br><br>");
