@@ -32,7 +32,7 @@ public class GuardaUsuario extends HttpServlet{
                 Vendedor vend = new Vendedor(req.getParameter("correoUsuario"),req.getParameter("passwordUsuario"));
                 sing.guardaVendedor(vend);
             }
-            pw.println("<HTML><SCRIPT>alert(\"Usuario Registrado\"); window.history.back();</SCRIPT></HTML>");
+            pw.println("<HTML><SCRIPT>alert(\"Prueba github\"); window.history.back();</SCRIPT></HTML>");
             pw.close();
         }else{
             pw.println("<HTML><SCRIPT>alert(\"El correo ya se está usando\"); window.history.back();</SCRIPT></HTML>");
