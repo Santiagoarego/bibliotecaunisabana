@@ -46,6 +46,7 @@ public class GuardaUsuario extends HttpServlet{
         for(int i=0; i<emp.size();i++) {
             if(emp.get(i).getCorreo().equals(correo)){
                 existe=true;
+                
                 break;
             }
             
