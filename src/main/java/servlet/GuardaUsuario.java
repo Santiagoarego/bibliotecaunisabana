@@ -15,23 +15,32 @@ import javax.servlet.http.HttpServletResponse;
     )
 public class GuardaUsuario extends HttpServlet{
 
-   
+
 
     public void doPost  (HttpServletRequest req, HttpServletResponse res)
     throws ServletException, IOException {
         res.setContentType("text/html");
         //Sirven para printear un HTML como respuesta
         PrintWriter pw = res.getWriter();
-        
+
         Arreglos sing = Arreglos.constructora();
-        if(!this.existeComprador(req.getParameter("correoUsuario"),sing.getCompradores()) && !(this.existeVendedor(req.getParameter("correoUsuario"),sing.getVendedores()))){
-            if(req.getParameter("USER").equals("c")){
-                Comprador comp = new Comprador(req.getParameter("correoUsuario"),req.getParameter("passwordUsuario"));
-                sing.guardaComprador(comp);
-            }else if(req.getParameter("USER").equals("v")){
-                Vendedor vend = new Vendedor(req.getParameter("correoUsuario"),req.getParameter("passwordUsuario"));
-                sing.guardaVendedor(vend);
-            }
+        //ACA SE DEBE ENVIAR EL ID, NO EL CORREO.
+        if(!this.existeUsuario(req.getParameter("correoUsuario"),sing.getUsuarios()))
+        {
+          //PONER CONDICIONAL QUE SE RELACIONE CON EL RADIOBUTTON PARA VER SI ESTA SELECCIONADO ESTUDIANTE
+          if(1==1)
+          {
+            //Enviar parametros a estud
+            Estudiante estud = new Estudiante();
+            sing.guardaUsuario(estud);
+          }
+          //PONER CONDICIONAL QUE SE RELACIONE CON EL RADIOBUTTON PARA VER SI ESTA SELECCIONADO ESTUDIANTE
+          else if(2==2)
+          {
+            //Enviar parametros a biblio
+            Bibliotecario biblio = new Bibliotecario();
+            sing.guardaUsuario(biblio);
+          }
             pw.println("<HTML><SCRIPT>alert(\"Yeisson es gay\"); window.history.back();</SCRIPT></HTML>");
             pw.close();
         }else{
@@ -41,23 +50,10 @@ public class GuardaUsuario extends HttpServlet{
 
     }
 
-    public boolean existeVendedor(String correo, ArrayList<Vendedor> emp){
+    public boolean existeUsuario(int ID, ArrayList<Usuario> users){
         boolean existe=false;
-        for(int i=0; i<emp.size();i++) {
-            if(emp.get(i).getCorreo().equals(correo)){
-                existe=true;
-                
-                break;
-            }
-            
-        }
-        return existe;
-        
-    }
-    public boolean existeComprador(String correo, ArrayList<Comprador> emp){
-        boolean existe=false;
-        for(int i=0; i<emp.size();i++) {
-            if(emp.get(i).getCorreo().equals(correo)){
+        for(int i=0; i<users.size();i++) {
+            if(users.get(i).getId()==ID){
                 existe=true;
                 break;
             }
@@ -66,5 +62,4 @@ public class GuardaUsuario extends HttpServlet{
         return existe;
 
     }
-
 }
