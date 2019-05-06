@@ -25,7 +25,7 @@ public class GuardaUsuario extends HttpServlet{
 
         Arreglos sing = Arreglos.constructora();
         //ACA SE DEBE ENVIAR EL ID, NO EL CORREO.
-        if(!this.existeUsuario(req.getParameter(""),sing.getUsuarios()))
+        if(!this.existeUsuario(Integer.parseInt(req.getParameter("")),sing.getUsuarios()))
         {
           //PONER CONDICIONAL QUE SE RELACIONE CON EL RADIOBUTTON PARA VER SI ESTA SELECCIONADO ESTUDIANTE
           if(1==1)
