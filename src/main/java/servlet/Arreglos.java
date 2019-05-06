@@ -36,8 +36,16 @@ public class Arreglos {
         bibliotecarios.add(bib);
     }
 
-    public ArrayList<Comprador> getBibliotecarios() {
+    public ArrayList<Bibliotecario> getBibliotecarios() {
         return this.bibliotecarios;
+    }
+
+    public void setEstudiantes(ArrayList<Estudiante> estudaintes1) {
+        this.bibliotecarios = estudiantes1;
+    }
+
+    public ArrayList<Estudiante> getEstudiantes() {
+        return this.estudiantes;
     }
 
     public void setBibliotecarios(ArrayList<Bibliotecario> bibliotecarios1) {
