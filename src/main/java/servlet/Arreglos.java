@@ -16,8 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 public class Arreglos {
 
     private static Arreglos instancia = null;
-    private ArrayList<Bibliotecario> bibliotecarios = new ArrayList();
-    private ArrayList<Estudiante> estudiantes = new ArrayList();
+    private ArrayList<Usuario> usuarios = new ArrayList();
     public static Arreglos constructora() {
 
         if (instancia == null) {
@@ -28,27 +27,15 @@ public class Arreglos {
     }
 
 
-    public void guardaEstudiante(Estudiante est) {
-        estudiantes.add(est);
+    public void guardaUsuario(Usuario user) {
+        usuarios.add(user);
     }
 
-    public void guardaBibliotecario(Bibliotecario bib) {
-        bibliotecarios.add(bib);
+    public void setUsuarios(ArrayList<Usuario> usuarios1) {
+        this.bibliotecarios = usuarios1;
     }
 
-    public ArrayList<Bibliotecario> getBibliotecarios() {
-        return this.bibliotecarios;
-    }
-
-    public void setEstudiantes(ArrayList<Estudiante> estudaintes1) {
-        this.bibliotecarios = estudiantes1;
-    }
-
-    public ArrayList<Estudiante> getEstudiantes() {
-        return this.estudiantes;
-    }
-
-    public void setBibliotecarios(ArrayList<Bibliotecario> bibliotecarios1) {
-        this.bibliotecarios = bibliotecarios1;
+    public ArrayList<usuario> getUsuarios() {
+        return this.usuarios;
     }
 }
