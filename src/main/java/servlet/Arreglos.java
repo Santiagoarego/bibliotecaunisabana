@@ -35,7 +35,7 @@ public class Arreglos {
         this.bibliotecarios = usuarios1;
     }
 
-    public ArrayList<usuario> getUsuarios() {
+    public ArrayList<Usuario> getUsuarios() {
         return this.usuarios;
     }
 }

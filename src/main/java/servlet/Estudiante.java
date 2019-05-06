@@ -10,6 +10,13 @@ public class Estudiante extends Usuario
     this.facultad = facultad;
   }
 
+  public  Estudiante()
+  {
+    super();
+    this.facultad="";
+  }
+
+
   public String getFacultad()
   {
     return this.facultad;

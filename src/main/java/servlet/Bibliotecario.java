@@ -10,6 +10,12 @@ public class Bibliotecario extends Usuario
     this.dependencia = dependencia;
   }
 
+  public  Bibliotecario()
+  {
+    super();
+    this.dependencia = "";
+  }
+
   public String getDependencia()
   {
     return this.dependencia;

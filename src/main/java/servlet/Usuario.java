@@ -13,6 +13,13 @@ public class Usuario {
         this.id = id;
     }
 
+    public Usuario() {
+        this.correo = "";
+        this.contraseña = "";
+        this.nombre = "";
+        this.id = -2;
+    }
+
     public String getCorreo() {
         return this.correo;
     }
