@@ -16,10 +16,8 @@ import javax.servlet.http.HttpServletResponse;
 public class Arreglos {
 
     private static Arreglos instancia = null;
-    private ArrayList<Comprador> compradores = new ArrayList();
-    private ArrayList<Vendedor> vendedores = new ArrayList();
-    private ArrayList<Venta> ventas = new ArrayList();
-    private ArrayList<Oferta> ofertas = new ArrayList();
+    private ArrayList<Bibliotecario> bibliotecarios = new ArrayList();
+    private ArrayList<Estudiante> estudiantes = new ArrayList();
     public static Arreglos constructora() {
 
         if (instancia == null) {
