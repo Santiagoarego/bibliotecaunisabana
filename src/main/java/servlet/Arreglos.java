@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(
-        name = "MyServlet", 
+        name = "MyServlet",
         urlPatterns = {"/arreglos"}
     )
 public class Arreglos {
@@ -30,52 +30,19 @@ public class Arreglos {
     }
 
 
-    public void guardaComprador(Comprador emp) {
-        compradores.add(emp);
+    public void guardaEstudiante(Estudiante est) {
+        estudiantes.add(est);
     }
 
-    public void guardaVendedor(Vendedor pro) {
-        vendedores.add(pro);
+    public void guardaBibliotecario(Bibliotecario bib) {
+        bibliotecarios.add(bib);
     }
 
-    public void guardaVenta(Venta rel) {
-        ventas.add(rel);
-
-    }
-    public void guardaOferta(Oferta rel) {
-        ofertas.add(rel);
-
+    public ArrayList<Comprador> getBibliotecarios() {
+        return this.bibliotecarios;
     }
 
-    public ArrayList<Comprador> getCompradores() {
-        return compradores;
-    }
-
-    public void setCompradores(ArrayList<Comprador> compradores) {
-        this.compradores = compradores;
-    }
-
-    public ArrayList<Vendedor> getVendedores() {
-        return vendedores;
-    }
-
-    public void setVendedores(ArrayList<Vendedor> vendedores) {
-        this.vendedores = vendedores;
-    }
-
-    public ArrayList<Venta> getVentas() {
-        return ventas;
-    }
-
-    public void setVentas(ArrayList<Venta> ventas) {
-        this.ventas = ventas;
-    }
-
-    public ArrayList<Oferta> getOfertas() {
-        return ofertas;
-    }
-
-    public void setOfertas(ArrayList<Oferta> ofertas) {
-        this.ofertas = ofertas;
+    public void setBibliotecarios(ArrayList<Bibliotecario> bibliotecarios1) {
+        this.bibliotecarios = bibliotecarios1;
     }
 }
