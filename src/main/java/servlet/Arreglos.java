@@ -32,7 +32,7 @@ public class Arreglos {
     }
 
     public void setUsuarios(ArrayList<Usuario> usuarios1) {
-        this.bibliotecarios = usuarios1;
+        this.usuarios = usuarios1;
     }
 
     public ArrayList<Usuario> getUsuarios() {
